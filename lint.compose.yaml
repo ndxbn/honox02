@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  actionlint:
+    image: rhysd/actionlint:latest
+    working_dir: /repo
+    volumes:
+      - .:/repo
+    command: [ "--color"]
