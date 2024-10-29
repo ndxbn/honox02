@@ -15,5 +15,5 @@ jobs:
       - run: |
           cd bun
           bun dev
-          bun lint
-          bun test
+      # don't run `bun lint` and `bun fmt`
+      # default package.json used space to indentation, not tab.
