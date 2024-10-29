@@ -15,7 +15,7 @@ This project is created by `bun create ndxbn/bun`.
 
 ```bash
 bun install
-bun main.ts
+bun dev
 ```
 
 ## Testing
