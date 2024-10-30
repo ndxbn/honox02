@@ -1,3 +1,5 @@
 import { $ } from "bun";
 
-await Promise.all([$`bunx lefthook install`]);
+if (process.env.NODE_ENV === "development") {
+	await Promise.all([$`bunx lefthook install`]);
+}
