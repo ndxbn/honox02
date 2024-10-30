@@ -15,6 +15,7 @@
 	"scripts": {
 		"postinstall": "bun scripts/postinstall.ts",
 		"dev": "bun src/main.ts",
+		"start": "bun src/main.ts",
 		"lint": "biome check",
 		"fmt": "biome check --write --unsafe"
 	}
