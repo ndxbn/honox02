@@ -1,7 +1,10 @@
 {
-	"private": true,
 	"name": "bun",
+	"version": "0.0.0",
 	"type": "module",
+	"main": "index.js",
+	"exports": "./index.js",
+	"bin": "cli.js",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@tsconfig/bun": "1.0.7",
@@ -14,7 +17,8 @@
 	},
 	"scripts": {
 		"dev": "bun scripts/dev.ts",
-		"start": "bun src/main.ts",
+		"start": "bun src/server.ts",
+		"cli": "bun src/cli.ts",
 		"lint": "biome check",
 		"fmt": "biome check --write --unsafe"
 	}
