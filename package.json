@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"name": "bun",
 	"version": "0.0.0",
 	"type": "module",
@@ -20,6 +21,8 @@
 		"start": "bun src/server.ts",
 		"cli": "bun src/cli.ts",
 		"lint": "biome check",
-		"fmt": "biome check --write --unsafe"
-	}
+		"fmt": "biome check --write --unsafe",
+		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
+	},
+	"files": []
 }
