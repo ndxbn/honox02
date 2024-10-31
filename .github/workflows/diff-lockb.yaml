@@ -1,4 +1,4 @@
-name: attach bun .lockb file diff comment 
+name: attach bun .lockb file diff comment
 
 on:
   push:
@@ -12,3 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: koki-develop/bun-diff-action@22bcd25f41c7fcf78109176491abd57acb79012a # v1
+    permissions:
+      contents: read
+      pull-requests: write
