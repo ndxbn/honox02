@@ -1,3 +1,3 @@
-import * as t from "bun:test";
+import { test } from "bun:test";
 
-t.test.todo("main test", () => {});
+test.todo("main test");

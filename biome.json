@@ -1,5 +1,14 @@
 {
 	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"linter": {
+		"rules": {
+			"all": true,
+			"suspicious": {
+				"noConsole": "off",
+				"noConsoleLog": "off"
+			}
+		}
+	},
 	"files": {
 		"ignoreUnknown": true
 	},
