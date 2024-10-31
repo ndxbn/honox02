@@ -13,8 +13,7 @@
 		"typescript": "5.6.3"
 	},
 	"scripts": {
-		"postinstall": "bun scripts/postinstall.ts",
-		"dev": "bun src/main.ts",
+		"dev": "bun scripts/dev.ts",
 		"start": "bun src/main.ts",
 		"lint": "biome check",
 		"fmt": "biome check --write --unsafe"
