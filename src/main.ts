@@ -1,4 +1,5 @@
 function main(): Promise<void> {
+	console.log("hello ndxbn/bun main!");
 	return Promise.resolve();
 }
 
