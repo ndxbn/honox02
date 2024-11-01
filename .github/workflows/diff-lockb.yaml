@@ -1,9 +1,6 @@
 name: attach bun .lockb file diff comment
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 jobs:
