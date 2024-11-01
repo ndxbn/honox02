@@ -11,7 +11,9 @@
 		"@tsconfig/bun": "1.0.7",
 		"@tsconfig/strictest": "2.0.5",
 		"@types/bun": "latest",
-		"lefthook": "1.8.2"
+		"lefthook": "1.8.2",
+		"textlint": "^14.3.0",
+		"textlint-rule-preset-ja-technical-writing": "^10.0.1"
 	},
 	"peerDependencies": {
 		"typescript": "5.6.3"
@@ -21,6 +23,7 @@
 		"start": "bun src/server.ts",
 		"cli": "bun src/cli.ts",
 		"lint": "biome check",
+		"lint:docs:ja": "textlint docs/ja/",
 		"fmt": "biome check --write --unsafe",
 		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
 	},
