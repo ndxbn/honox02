@@ -1,6 +1,6 @@
 {
 	"private": true,
-	"name": "bun",
+	"name": "<default>",
 	"version": "0.0.0",
 	"type": "module",
 	"main": "index.js",
@@ -13,7 +13,8 @@
 		"@types/bun": "latest",
 		"lefthook": "1.8.2",
 		"textlint": "14.3.0",
-		"textlint-rule-preset-ja-technical-writing": "10.0.1"
+		"textlint-rule-preset-ja-technical-writing": "10.0.1",
+		"type-fest": "^4.26.1"
 	},
 	"peerDependencies": {
 		"typescript": "5.6.3"
