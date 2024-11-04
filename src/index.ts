@@ -1,3 +1,3 @@
-export function main(): void {
-	console.log("hello, bun world!");
+export async function main(): Promise<string> {
+	return await "hello, bun world!";
 }
