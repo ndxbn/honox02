@@ -1,3 +1,7 @@
-import { test } from "bun:test";
+import { expect, test } from "bun:test";
+import { main } from "./index.ts";
 
-test.todo("main test");
+test("main test", async () => {
+	const hello = await main();
+	expect(hello).toBe("hello, bun world!");
+});
