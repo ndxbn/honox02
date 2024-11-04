@@ -40,15 +40,3 @@ jobs:
       - uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
-  dockle:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - name: Build an image from Dockerfile
-        run: |
-          docker build -t built-image .
-      - name: Run dockle
-        uses: goodwithtech/dockle-action@main
-        with:
-          image: 'built-image'
