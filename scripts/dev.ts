@@ -1,4 +1,4 @@
-import { $ } from "bun";
+import { $, type ShellError } from "bun";
 import type { PackageJson } from "type-fest";
 import packageJson from "../package.json" with { type: "json" };
 
@@ -28,6 +28,14 @@ if (packageJson.name == null || packageJson.name === "<default>") {
 
 await $`bun fmt`;
 await $`git add .`;
-await $`git commit --amend --allow-empty -m "Initial commit (via bun create)"`;
+await $`git commit --amend -m "Initial commit (via bun create)"`.catch(
+	(reason: ShellError) => {
+		// fatal: You have nothing to amend
+		if (reason.exitCode === 128) {
+			return;
+		}
+		throw reason;
+	},
+);
 
 console.log("To get started developing: edit src/server.ts and `bun start`");
