@@ -17,3 +17,5 @@ jobs:
           bun dev
       # don't run `bun lint` and `bun fmt`
       # default package.json used space to indentation, not tab.
+        env:
+          NODE_ENV: development
