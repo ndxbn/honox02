@@ -28,6 +28,6 @@ if (packageJson.name == null || packageJson.name === "<default>") {
 
 await $`bun fmt`;
 await $`git add .`;
-await $`git commit --amend-m "Initial commit (via bun create)"`;
+await $`git commit --amend -m "Initial commit (via bun create)"`;
 
 console.log("To get started developing: edit src/server.ts and `bun start`");
