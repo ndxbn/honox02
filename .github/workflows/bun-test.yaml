@@ -15,6 +15,6 @@ jobs:
       - run: bun install
       - run: bun test
       - name: publish code coverage
-        uses: paambaati/codeclimate-action@v9.0.0
+        uses: paambaati/codeclimate-action@f429536ee076d758a24705203199548125a28ca7 # v9.0.0
         env:
           CC_TEST_REPORTER_ID: 7ab37ceb79625ff306e05fcea62a7b91d3722b64b3dcff8a48dbc8de4275f768
