@@ -37,11 +37,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build an image from Dockerfile
         run: |
-          docker build -t built-image:scan .
+          docker build -t built-image .
       - name: Run dockle
         uses: goodwithtech/dockle-action@main
         with:
-          image: 'built-image:scan'
-#          format: 'list'
-#          exit-code: '1'
-#          exit-level: 'warn'
+          image: 'built-image'
