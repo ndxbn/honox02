@@ -14,3 +14,7 @@ jobs:
       - uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2
       - run: bun install
       - run: bun test
+      - name: publish code coverage
+        uses: paambaati/codeclimate-action@v9.0.0
+        env:
+          CC_TEST_REPORTER_ID: 7ab37ceb79625ff306e05fcea62a7b91d3722b64b3dcff8a48dbc8de4275f768
