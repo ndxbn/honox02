@@ -26,7 +26,7 @@ bun install
 # prepare development environment
 bun dev
 # run main script
-bun start
+bun start:dev
 ```
 
 ## Testing

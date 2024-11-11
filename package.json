@@ -6,6 +6,16 @@
 	"main": "index.js",
 	"exports": "./index.js",
 	"bin": "cli.js",
+	"scripts": {
+		"dev": "bun scripts/dev.ts",
+		"start": "bun src/server.ts",
+		"start:dev": "bun --watch src/server.ts",
+		"cli": "bun src/cli.ts",
+		"lint": "biome check",
+		"lint:docs:ja": "textlint docs/ja/",
+		"fmt": "biome check --write --unsafe",
+		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
 		"@tsconfig/bun": "1.0.7",
@@ -19,14 +29,9 @@
 	"peerDependencies": {
 		"typescript": "5.6.3"
 	},
-	"scripts": {
-		"dev": "bun scripts/dev.ts",
-		"start": "bun src/server.ts",
-		"cli": "bun src/cli.ts",
-		"lint": "biome check",
-		"lint:docs:ja": "textlint docs/ja/",
-		"fmt": "biome check --write --unsafe",
-		"prepack": "bun build src/index.ts src/cli.ts --outdir . --sourcemap --minify"
-	},
-	"files": []
+	"files": [],
+	"dependencies": {
+		"hono": "^4.6.9",
+		"honox": "^0.1.26"
+	}
 }
