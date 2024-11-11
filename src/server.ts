@@ -42,7 +42,10 @@ const app = createApp({
 	// biome-ignore lint/style/useNamingConvention: honox
 	RENDERER: await globImport(["**/_renderer.(ts|tsx)"]),
 	// biome-ignore lint/style/useNamingConvention: honox
-	ROUTES: await globImport(["**/!(_*|$*|*.test|*.spec).(ts|tsx|md|mdx)", ".well-known/**/!(_*|$*|*.test|*.spec).(ts|tsx|md|mdx)"]),
+	ROUTES: await globImport([
+		"**/!(_*|$*|*.test|*.spec).(ts|tsx|md|mdx)",
+		".well-known/**/!(_*|$*|*.test|*.spec).(ts|tsx|md|mdx)",
+	]),
 	// biome-ignore lint/style/useNamingConvention: honox
 	NOT_FOUND: await globImport(["**/_404.(ts|tsx)"]),
 	// biome-ignore lint/style/useNamingConvention: honox
