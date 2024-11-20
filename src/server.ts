@@ -14,7 +14,7 @@ type RouteList =
 async function globImport<R extends RouteList[keyof RouteList]>(
 	patterns: string[],
 ): Promise<R> {
-	const routeList: R = {};
+	const routeList: R = {} as R;
 	for (const pattern of patterns) {
 		for await (const filePath of new Glob(pattern).scan({
 			cwd: `${process.cwd()}/src/routes`,
